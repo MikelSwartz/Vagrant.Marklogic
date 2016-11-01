@@ -1,2 +1,2 @@
 # Vagrant.Marklogic
-A vagrant Marklogic instance. 
+A vagrant Marklogic instance. MarkLogic must be downloaded manually. 
