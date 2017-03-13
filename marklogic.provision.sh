@@ -26,3 +26,8 @@ rpm -i MarkLogic-RHEL6-8.0-6.x86_64.rpm
 rm -rf /vagrant/mlcp-8.0.6.3
 
 unzip /vagrant/mlcp-8.0.6.3-bin.zip
+
+curl -X POST  --anyauth -u admin:$(cat pass)   --header "Content-Type:application/json"   -d "{\"server-name\":\"Client-REST\", \"group-name\":\"Default\",\
+   \"server-type\":\"http\", \"root\":\"/\", \"port\":8010, \"content-database\":\"Documents\",  \"modules-database\":\"Modules\", \"log-errors\":false, \
+   \"default-error-format\":\"compatible\", \"rewrite-resolves-globally\":true, \"url-rewriter\":\"/MarkLogic/rest-api/8000-rewriter.xml\", \
+   \"default-time-limit\":3600, \"error-handler\":\"/MarkLogic/rest-api/8000-error-handler.xqy\"}" "http://127.0.0.1:8002/manage/v2/servers"
