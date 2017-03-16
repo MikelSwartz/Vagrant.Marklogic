@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /vagrant/
 yum update
-yum install -y vim git tree wget curl unzip lsb-core-amd64 gdb libc.so.6 
+yum install -y vim git tree wget curl unzip lsb-core-amd64 gdb libc.so.6 lsof
 if [ -f "/vagrant/jre-8u60-linux-x64.rpm" ]
 then
         echo "jre-8u60-linux-x64.rpm exists"
